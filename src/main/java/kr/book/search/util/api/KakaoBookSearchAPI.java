@@ -1,4 +1,4 @@
-package kr.book.search.api;
+package kr.book.search.util.api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
