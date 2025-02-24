@@ -3,6 +3,7 @@ package kr.book.search.controller;
 import kr.book.search.model.Book;
 import kr.book.search.service.AppService;
 import kr.book.search.util.api.KakaoBookSearchAPI;
+import kr.book.search.util.pdf.PdfGenerator;
 import kr.book.search.view.InputView;
 import kr.book.search.view.OutputView;
 
@@ -23,6 +24,7 @@ public class AppController {
 
         List<Book> books = getBooks(title);
 
+        createPDF(books);
     }
 
     private String inputBookTitle(){
@@ -46,5 +48,9 @@ public class AppController {
         }
 
         return books;
+    }
+
+    private void createPDF(List<Book> books){
+        PdfGenerator.generateBookListPdf(books, "result");
     }
 }
