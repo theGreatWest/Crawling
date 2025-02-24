@@ -29,7 +29,7 @@ public class KakaoBookSearchAPI {
         // url 이용해 서버에 요청하는 객체 생성
         Request request = new Request.Builder()
                 .url(urlBuilder.build())
-                .addHeader("Authorization", "KakaoAK"+API_KEY) // -H "Authorization: KakaoAK ${REST_API_KEY}" \ 헤더를 이런식으로 추가해야 된다고설명되어 있기 때문에 요청에 추가
+                .addHeader("Authorization", "KakaoAK "+API_KEY) // -H "Authorization: KakaoAK ${REST_API_KEY}" \ 헤더를 이런식으로 추가해야 된다고설명되어 있기 때문에 요청에 추가
                 .build();
 
         // 네트워킹: 요청 값을 전달해 접속한 후 응답 받아 처리
