@@ -11,7 +11,6 @@ public class InputView {
 
             return br.readLine();
         }catch (IOException e){
-            System.out.println("검색에 실패했습니다.");
 
             return null;
         }
